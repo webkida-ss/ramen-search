@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+// config
+@import 'config/_setting';// 基本設定
+@import 'config/_mixin';// ミックスイン
+@import 'config/_function';// ファンクション
+@import 'config/_placeholder';// プレースホルダー
+@import 'config/_initialize';// 初期化
+@import 'config/_common';// 共通系
+
+// parts/common：共通
+@import 'parts/10_common/_header';// ヘッダー
+@import 'parts/10_common/_footer';// フッター
+
+// parts
+@import 'parts/_';// 
+@import 'parts/_access';// アクセス
+@import 'parts/_contact';// お問い合わせ
