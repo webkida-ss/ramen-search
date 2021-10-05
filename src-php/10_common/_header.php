@@ -24,6 +24,15 @@ $array_header = [];
 							<a href="">豚骨</a>
 						</div>
 					</li>
+					<!-- 麺の太さから選ぶ -->
+					<li class="header__item">
+						<p class="header__item--main">麺の太さから選ぶ<span>thickness</span></p>
+						<div class="header__item--detail">
+							<a href="">太麺</a>
+							<a href="">中太麺</a>
+							<a href="">細麺</a>
+						</div>
+					</li>
 					<!-- 特徴から選ぶ -->
 					<li class="header__item">
 						<p class="header__item--main">
