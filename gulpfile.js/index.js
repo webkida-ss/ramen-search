@@ -163,10 +163,10 @@ function img() {
 // BrowserSync ============================================================================
 function bs() {
 	$.browserSync.init({
-		server: {
-			baseDir: path.dist,
-		},
-		//proxy: 'http://localhost:10004/', // Local by Flywheelのドメイン
+		// server: {
+		// 	baseDir: path.dist,
+		// },
+		proxy: 'http://localhost:10049/', // Local by Flywheelのドメイン
 		notify: true,
 		xip: false,
 	});
