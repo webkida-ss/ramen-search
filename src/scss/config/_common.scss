@@ -18,10 +18,7 @@
 		width: $layout-width-inner-tab;
 	}
 	@include mq(sp) {
-		// width: auto;
-		// width: ($layout-width-inner-sp / $layout-width-canvas-sp) * 100% ;
 		width: $layout-width-inner-sp;
-		// margin: 0 *px;// 固定マージン
 	}
 }
 
@@ -186,6 +183,13 @@ $util-link-border-size: 3px;
 // container
 // ------------------------------------------------------------
 .container {
+	margin-top: 50px;
+	@include mq(tab) {
+		margin-top: 40px;
+	}
+	@include mq(sp) {
+		margin-top: 30px;
+	}
 }
 
 // ------------------------------------------------------------
