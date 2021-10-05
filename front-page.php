@@ -25,6 +25,11 @@
 					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
 				</section>
 
+				<!-- 詳細検索 -->
+				<section class="front-page__detail-search">
+
+				</section>
+
 
 
 			</main>
