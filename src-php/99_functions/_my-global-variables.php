@@ -12,6 +12,9 @@ function my_global()
 	global $array_thickness;
 	$array_thickness = ['太麺', '中太麺', '細麺'];
 
+	global $array_region;
+	$array_region = ['北海道・東北', '関東', '中部・近畿', '中国・四国', '九州'];
+
 	global $array_feature;
 	$array_feature = ['駅近', '店内がきれい', '1人で入りやすい'];
 }
