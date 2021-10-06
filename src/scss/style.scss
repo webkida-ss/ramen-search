@@ -14,6 +14,7 @@
 @import 'parts/00_template/_not-found';
 @import 'parts/00_template/_searchform';
 @import 'parts/00_template/_front-page';
+@import 'parts/00_template/_single-shop';
 
 
 // 共通系 -----------------------------------------------------
@@ -30,3 +31,7 @@
 // お問い合わせ
 @import 'parts/20_component/02_contact/_contact';
 
+// 店舗
+@import 'parts/20_component/03_shop/_shop-top';
+@import 'parts/20_component/03_shop/_shop-menu';
+@import 'parts/20_component/03_shop/_shop-access';

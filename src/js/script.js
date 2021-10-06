@@ -24,25 +24,14 @@ jQuery(function () {
 	});
 
 	/*********************************************
-	 * スライダー
-	 * jQueryプラグイン
+	 * タブメニュー制御
+	 * jQuery
 	 *********************************************/
-	new Swiper('.swiper-container', {
-		width: 274, // スライドサイズ
-		spaceBetween: 24, // スライド間
-		loop: true, // 最後に達したら先頭に戻る
-		loopedSlides: 6, // スライド数
-		pagination: { // ページネーション
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		breakpoints: { // ブレイクポイント
-			600: { // min-width 600
-				spaceBetween: 40,
-				width: 400,
-			}
-		}
+	let tab_menus = jQuery('.js-tab-menu');
+	tab_menus.click(function () {
+		jQuery('.tab-active').removeClass('tab-active'); // tab-activeクラスを消す
+		jQuery(this).addClass('tab-active'); // クリックした箇所にtab-activeクラスを追加
+		let index = tab_menus.index(this);
+		jQuery('.js-tab-item').eq(index).addClass('tab-active');
 	});
-
 });

@@ -17,5 +17,9 @@ function my_global()
 
 	global $array_feature;
 	$array_feature = ['駅近', '店内がきれい', '1人で入りやすい'];
+
+	global $array_tabmenu;
+	$array_tabmenu = ['トップ', 'メニュー', 'アクセス'];
+	
 }
 add_action('after_setup_theme', 'my_global');
