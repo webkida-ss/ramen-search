@@ -27,7 +27,7 @@
 
 				<!-- 詳細検索 -->
 				<section class="front-page__detail-search">
-
+					<?php get_template_part('src-php/10_common/_detail-search'); ?>
 				</section>
 
 

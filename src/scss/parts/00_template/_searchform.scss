@@ -1,3 +1,63 @@
 .searchform {
-	
+	padding: 40px 0;
+	border: 2px solid $beige;
+	border-radius: 30px;
+	text-align: center;
+
+	form {
+		display: inline-block;
+		margin: 0 auto;
+
+		text-align-last: left;
+	}
+
+	&__item {
+		&:not(:first-child) {
+			margin-top: 30px;
+		}
+		label {
+			display: inline-block;
+			width: 200px;
+		}
+		select {
+			width: 200px;
+		}
+
+		input {
+			width: 500px;
+			height: 40px;
+			padding: 10px 50px 10px 20px;
+			border: 2px solid $gold;
+			border-radius: 15px;
+			font-weight: $font-weight-bold;
+			letter-spacing: .1em;
+			outline: none;
+		}
+	}
+
+
+
+	// 検索ボタン
+	button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px auto 0;
+		padding: 0 20px;
+		border: 1px solid $gold;
+		background-color: $beige;
+		color: $white;
+		font-weight: $font-weight-bold;
+		cursor: pointer;
+		transition: all $transition-change-time ease 0s;
+
+		&:hover {
+			opacity: $hover-opacity;
+		}
+
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
 }
