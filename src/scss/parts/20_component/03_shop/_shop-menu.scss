@@ -1,4 +1,39 @@
 .shop-menu{ 
-
     @extend %section-padding;
+
+    &__container{
+        
+    }
+    &__item{
+        border-top: 1px dotted $gold;
+        &:not(:first-child){
+            margin-top: 40px;
+        }
+        display: flex;
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        div,p{
+            margin-left: 20px;
+            padding-top: 30px;
+        }
+        div{
+            flex-shrink: 0;
+            width: 150px;
+            text-align: center;
+            span{
+                display: inline-block;
+                margin-top: 20px;
+                color: red;
+                font-size: 1.5em;
+                border-bottom: 1px solid red;
+            }
+        }
+        p{
+            line-height: 1.5;
+            @include lhCrop(1.5);
+        }
+    }
 }
