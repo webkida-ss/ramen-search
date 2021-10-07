@@ -1,69 +1,69 @@
-.top{ 
-    
-    &__container{
-        border: 2px solid $beige;
-        border-radius: 30px;
-        background-image: url(../img/top.webp);
-        background-size: cover;
-        height: 600px;
-        background-position: center;
-        position: relative;
-    }
-    
-    &__search{
-        position: absolute;
-        bottom: 15%;
-        right: 5%;
+.top {
 
-        p {
-            color: $beige;
-            font-style: italic;
-            font-weight: $font-weight-bold;
-            font-size: 2.4rem;
-            letter-spacing: .2em;
-            text-align: center;
-            text-shadow: -2px 2px 0 white;
-        }
-    
-        form {
-            position: relative;
-            margin-top: 30px;
-            input {
-                width: 500px;
-                height: 50px;
-                padding: 10px 50px 10px 20px;
-                border: 2px solid $gold;
-                border-radius: 15px;
-                font-weight: $font-weight-bold;
-                letter-spacing: .1em;
-                outline: none;
-                transition: all $transition-change-time ease 0s;
-                &:hover,
-                &:focus {
-                    box-shadow: 0px 0px 5px 0px $beige;
-                }
-            }
-            button {
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 10px;
-                transform: translateY(-50%);
-                width: 100px;
-                width: 40px;
-                height: 40px;
-                border: none;
-                background-color: transparent;
-                cursor: pointer;
-                transition: all $transition-change-time ease 0s;
-                &:hover {
-                    opacity: $hover-opacity;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-    }
+	&__container {
+		position: relative;
+		height: 600px;
+		border: 2px solid $beige;
+		border-radius: 30px;
+		background-image: url(../img/top.webp);
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__search {
+		position: absolute;
+		right: 5%;
+		bottom: 15%;
+
+		p {
+			color: $beige;
+			font-style: italic;
+			font-weight: $font-weight-bold;
+			font-size: 2.4rem;
+			letter-spacing: .2em;
+			text-align: center;
+			text-shadow: -2px 2px 0 white;
+		}
+
+		form {
+			position: relative;
+			margin-top: 30px;
+			input {
+				width: 500px;
+				height: 50px;
+				padding: 10px 50px 10px 20px;
+				border: 2px solid $gold;
+				border-radius: 15px;
+				font-weight: $font-weight-bold;
+				letter-spacing: .1em;
+				outline: none;
+				transition: all $transition-change-time ease 0s;
+				&:hover,
+				&:focus {
+					box-shadow: 0px 0px 5px 0px $beige;
+				}
+			}
+			button {
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+				width: 100px;
+				width: 40px;
+				height: 40px;
+				border: none;
+				background-color: transparent;
+				cursor: pointer;
+				transition: all $transition-change-time ease 0s;
+				&:hover {
+					opacity: $hover-opacity;
+				}
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
 }

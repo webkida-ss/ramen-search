@@ -1,17 +1,23 @@
-.single-shop{
-    
-    // タブメニュー
-    &__shop-tab-menu{
-        $border: 2px solid $beige;
-        
-        &--list{
-            display: flex;
-            justify-content: center;
-            border-bottom: $border;
-        }
-        &--item{
-            background-color: $annin-white;
-            
+.single-shop {
+
+	// タブメニュー
+	&__shop-tab-menu {
+		$border: 2px solid $beige;
+
+		&--list {
+			display: flex;
+			justify-content: center;
+
+			border-bottom: $border;
+		}
+		&--item {
+			width: 150px;
+			padding: 10px;
+			background-color: $annin-white;
+			font-weight: $font-weight-bold;
+			text-align: center;
+			cursor: pointer;
+			transition: all $transition-change-time ease 0s;
             // ボーダー ----------------------------------------
             &:first-child{
                 border-left: $border;
@@ -23,24 +29,18 @@
                 background-color: $beige;
             }
             // ボーダー ----------------------------------------
-
-
-            padding: 10px;
-            font-weight: $font-weight-bold;
-            width: 150px;
-            cursor: pointer;
-            transition: all $transition-change-time ease 0s;
-            text-align: center;
-            &:hover {
-                opacity: $hover-opacity;
-            }
-        }
-    }
-    // アイテム
-    &__shop-top,&__shop-menu,&__shop-access{
-        display: none;
-        &.tab-active{
-            display: block;
-        }
-    }
+			&:hover {
+				opacity: $hover-opacity;
+			}
+		}
+	}
+	// アイテム
+	&__shop-top,
+	&__shop-menu,
+	&__shop-access {
+		display: none;
+		&.tab-active {
+			display: block;
+		}
+	}
 }
