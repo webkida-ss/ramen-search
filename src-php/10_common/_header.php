@@ -11,7 +11,9 @@ $array_header = [];
 
 		<div class="header__main">
 			<h1 class="header__title">
-				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>" alt="サイトロゴ">
+				<a href="<?php echo esc_url(home_url()); ?>">
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>" alt="サイトロゴ">
+				</a>
 			</h1>
 			<nav class="header__nav">
 				<ul class="inner header__list">
