@@ -1,39 +1,43 @@
-.shop-menu{ 
-    @extend %section-padding;
+.shop-menu {
+	@extend %section-padding;
 
-    &__container{
-        
-    }
-    &__item{
-        border-top: 1px dotted $gold;
-        &:not(:first-child){
-            margin-top: 40px;
-        }
-        display: flex;
+	&__item {
+		display: flex;
+		border-top: 1px dotted $gold;
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
 
-        img{
-            width: 200px;
-            height: 200px;
-        }
-        div,p{
-            margin-left: 20px;
-            padding-top: 30px;
-        }
-        div{
-            flex-shrink: 0;
-            width: 150px;
-            text-align: center;
-            span{
-                display: inline-block;
-                margin-top: 20px;
-                color: red;
-                font-size: 1.5em;
-                border-bottom: 1px solid red;
-            }
-        }
-        p{
-            line-height: 1.5;
-            @include lhCrop(1.5);
-        }
-    }
+		img {
+			width: 200px;
+			height: 200px;
+		}
+		div,
+		p {
+			margin-left: 20px;
+			padding-top: 30px;
+		}
+		div {
+			flex-shrink: 0;
+			width: 150px;
+			font-style: italic;
+			text-align: center;
+			span {
+				display: block;
+				margin-top: 20px;
+				font-style: normal;
+				strong {
+					color: red;
+					font-weight: normal;
+					font-size: 1.5em;
+
+					border-bottom: 1px solid red;
+				}
+			}
+		}
+		p {
+			line-height: 1.5;
+			@include lhCrop(1.5);
+		}
+	}
 }

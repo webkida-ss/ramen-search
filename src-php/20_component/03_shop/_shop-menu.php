@@ -6,8 +6,7 @@
 					<img src="<?php the_sub_field('shop_menu_img'); ?>" alt="メニュー画像">
 					<div>
 						<?php the_sub_field('shop_menu_title'); ?>
-						<br>
-						<span><?php the_sub_field('shop_menu_price'); ?></span>円
+						<span><strong><?php the_sub_field('shop_menu_price'); ?></strong>円</span>
 					</div>
 					<p><?php the_sub_field('shop_menu_feature'); ?></p>
 				</div>
