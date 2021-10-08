@@ -25,12 +25,15 @@
 					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
 				</section>
 
+				<!-- レコメンド -->
+				<section class="front-page__recommend">
+					<?php get_template_part('src-php/20_component/01_top/_recommend'); ?>
+				</section>
+
 				<!-- 詳細検索 -->
 				<section class="front-page__detail-search">
 					<?php get_template_part('src-php/10_common/_detail-search'); ?>
 				</section>
-
-
 
 			</main>
 		</div><!-- /.container -->
