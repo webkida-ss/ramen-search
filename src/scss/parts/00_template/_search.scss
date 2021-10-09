@@ -1,3 +1,18 @@
 .search{
-	
+	%base{
+        margin-top: 60px;
+        @include mq(tab-only) {
+            margin-top: 40px;
+        }
+        @include mq(sp) {
+            margin-top: 20px;
+        }
+    }
+	&__search-detail{
+        @extend %base;
+    }
+    &__search-result{
+		@extend %base;
+    }
+
 }
