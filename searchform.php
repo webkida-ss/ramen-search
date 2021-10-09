@@ -3,6 +3,7 @@
 global $array_soup;
 global $array_thickness;
 global $array_feature;
+global $array_region;
 ?>
 
 <!-- 検索画面本文 -->
@@ -13,29 +14,48 @@ global $array_feature;
 		<!-- ラーメンの特徴 -->
 		<div class="searchform__item ramen">
 			<label>ラーメンの特徴から選ぶ</label>
-			<select name="soup">
-				<option value="">ラーメンスープ</option>
-				<?php foreach ($array_soup as $item) : ?>
-					<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
-				<?php endforeach; ?>
-			</select>
-			<select name="thickness">
-				<option value="">麺の太さ</option>
-				<?php foreach ($array_thickness as $item) : ?>
-					<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
-				<?php endforeach; ?>
-			</select>
+			<div class="searchform__item--select">
+				<select name="soup">
+					<option value="">ラーメンスープ</option>
+					<?php foreach ($array_soup as $item) : ?>
+						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+			<div class="searchform__item--select">
+				<select name="thickness">
+					<option value="">麺の太さ</option>
+					<?php foreach ($array_thickness as $item) : ?>
+						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
 		</div>
 
 		<!-- お店の特徴 -->
 		<div class="searchform__item feature">
 			<label>お店の特徴から選ぶ</label>
-			<select name="feature">
-				<option value="">お店の特徴</option>
-				<?php foreach ($array_feature as $item) : ?>
-					<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
-				<?php endforeach; ?>
-			</select>
+			<div class="searchform__item--select">
+				<select name="feature">
+					<option value="">お店の特徴</option>
+					<?php foreach ($array_feature as $item) : ?>
+						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		</div>
+
+		<!-- 地域 -->
+		<div class="searchform__item region">
+			<label>地域から選ぶ</label>
+			<div class="searchform__item--select">
+				<select name="region">
+					<option value="">地域</option>
+					<?php foreach ($array_region as $item) : ?>
+						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
 		</div>
 
 		<!-- フリーワード検索 -->

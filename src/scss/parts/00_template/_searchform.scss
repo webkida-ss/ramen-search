@@ -1,14 +1,20 @@
 .searchform {
-	padding: 40px 0;
 	border: 2px solid $beige;
-	border-radius: 30px;
 	text-align: center;
+	background-image: url(../img/search.webp);
+	background-position: center;
+	background-size: cover;
+	height: 500px;
+	box-shadow: 0px 0px 10px 0px $beige;
+	position: relative;
 
 	form {
+		position: absolute;
 		display: inline-block;
 		margin: 0 auto;
-
 		text-align-last: left;
+		top: 26%;
+		left: 2%;
 	}
 
 	&__item {
@@ -18,9 +24,42 @@
 		label {
 			display: inline-block;
 			width: 200px;
+			font-size: 1.4rem;
 		}
-		select {
+		&--select {
+			display: inline-block;
 			width: 200px;
+			select{
+				width: 100%;
+				appearance: none;
+				border: none;
+				border-bottom: 1px solid $gray;
+				background: $annin-white;
+				text-align: center;
+				&:focus,&:hover{
+					outline: none;
+				}
+				option{
+
+				}
+			}
+			&:not(:nth-of-type(1)){
+				margin-left: 20px;
+			}
+			position: relative;
+			&::after{
+				position: absolute;
+				display: block;
+				content: '';
+				top: 50%;
+				right: 3px;
+				transform: translateY(-50%);
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 5px 0 5px;
+				border-color: $gray transparent transparent transparent;
+			}
 		}
 
 		input {
@@ -42,7 +81,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 20px auto 0;
+		margin: 30px auto 0;
 		padding: 0 20px;
 		border: 1px solid $gold;
 		background-color: $beige;
