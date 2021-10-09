@@ -1,20 +1,21 @@
 .searchform {
+	position: relative;
+	height: 500px;
 	border: 2px solid $beige;
-	text-align: center;
+	box-shadow: 0px 0px 10px 0px $beige;
 	background-image: url(../img/search.webp);
 	background-position: center;
 	background-size: cover;
-	height: 500px;
-	box-shadow: 0px 0px 10px 0px $beige;
-	position: relative;
+	text-align: center;
 
 	form {
-		position: absolute;
 		display: inline-block;
-		margin: 0 auto;
-		text-align-last: left;
+		position: absolute;
 		top: 26%;
 		left: 2%;
+		margin: 0 auto;
+
+		text-align-last: left;
 	}
 
 	&__item {
@@ -24,48 +25,52 @@
 		label {
 			display: inline-block;
 			width: 200px;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
+			span{
+				font-size: 1.5em;
+				color: $gold;
+				font-weight: $font-weight-bold;
+			}
 		}
 		&--select {
 			display: inline-block;
+			position: relative;
 			width: 200px;
-			select{
+			select {
 				width: 100%;
-				appearance: none;
 				border: none;
-				border-bottom: 1px solid $gray;
 				background: $annin-white;
 				text-align: center;
-				&:focus,&:hover{
+
+				appearance: none;
+				border-bottom: 1px solid $gray;
+				&:focus,
+				&:hover {
 					outline: none;
 				}
-				option{
-
-				}
 			}
-			&:not(:nth-of-type(1)){
+			&:not(:nth-of-type(1)) {
 				margin-left: 20px;
 			}
-			position: relative;
-			&::after{
-				position: absolute;
+			&::after {
 				display: block;
-				content: '';
+				position: absolute;
 				top: 50%;
 				right: 3px;
 				transform: translateY(-50%);
 				width: 0;
 				height: 0;
-				border-style: solid;
 				border-width: 10px 5px 0 5px;
+				border-style: solid;
 				border-color: $gray transparent transparent transparent;
+				content: '';
 			}
 		}
 
 		input {
-			width: 500px;
+			width: 400px;
 			height: 40px;
-			padding: 10px 50px 10px 20px;
+			padding: 10px 20px;
 			border: 2px solid $gold;
 			border-radius: 15px;
 			font-weight: $font-weight-bold;
@@ -73,7 +78,6 @@
 			outline: none;
 		}
 	}
-
 
 
 	// 検索ボタン
