@@ -31,8 +31,6 @@
 					<?php get_template_part('src-php/20_component/04_search/_search-result'); ?>
 				</section>
 
-
-
 			</main>
 		</div><!-- /.container -->
 
