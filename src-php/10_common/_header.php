@@ -1,6 +1,9 @@
 <!-- データ -->
 <?php
-$array_header = [];
+global $array_soup;
+global $array_thickness;
+global $array_region;
+global $array_feature;
 ?>
 
 
@@ -21,31 +24,37 @@ $array_header = [];
 					<li class="header__item">
 						<p class="header__item--main">ラーメンスープから選ぶ<span>soup</span></p>
 						<div class="header__item--detail">
-							<a href="">醤油</a>
-							<a href="">味噌</a>
-							<a href="">豚骨</a>
+							<?php foreach ($array_soup as $item) : ?>
+								<a href="<?php echo esc_url(home_url() . '/?s=&soup=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
+							<?php endforeach; ?>
 						</div>
 					</li>
 					<!-- 麺の太さから選ぶ -->
 					<li class="header__item">
 						<p class="header__item--main">麺の太さから選ぶ<span>thickness</span></p>
 						<div class="header__item--detail">
-							<a href="">太麺</a>
-							<a href="">中太麺</a>
-							<a href="">細麺</a>
+							<?php foreach ($array_thickness as $item) : ?>
+								<a href="<?php echo esc_url(home_url() . '/?s=&thickness=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
+							<?php endforeach; ?>
+						</div>
+					</li>
+					<!-- 地域から選ぶ -->
+					<li class="header__item">
+						<p class="header__item--main">地域から選ぶ<span>region</span></p>
+						<div class="header__item--detail">
+							<?php foreach ($array_region as $item) : ?>
+								<a href="<?php echo esc_url(home_url() . '/?s=&region=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
+							<?php endforeach; ?>
 						</div>
 					</li>
 					<!-- 特徴から選ぶ -->
 					<li class="header__item">
-						<p class="header__item--main">
-							<a href="">お店の特徴から選ぶ<span>feature</span></a>
-						</p>
-					</li>
-					<!-- お問い合わせ -->
-					<li class="header__item">
-						<p class="header__item--main">
-							<a href="contact">お問い合わせ<span>contact</span></a>
-						</p>
+						<p class="header__item--main">お店の特徴から選ぶ<span>feature</span></p>
+						<div class="header__item--detail">
+							<?php foreach ($array_feature as $item) : ?>
+								<a href="<?php echo esc_url(home_url() . '/?s=&feature=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
+							<?php endforeach; ?>
+						</div>
 					</li>
 				</ul>
 			</nav>
