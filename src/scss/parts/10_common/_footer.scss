@@ -1,8 +1,17 @@
 .footer {
-	&__inner {
-		// 
-	}
+	height: 60px;
+	background-color: $annin-white;
+	color: $gold;
 	&__copy-right {
-		// 
+		height: 100%;
+		line-height: 60px;
+		text-align: center;
+
+		@include mq(tab-only) {
+			font-size: 1.4rem;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
 	}
 }
