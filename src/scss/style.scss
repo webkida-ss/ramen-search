@@ -20,7 +20,7 @@
 // 共通系 -----------------------------------------------------
 @import 'parts/10_common/_header';// ヘッダー
 @import 'parts/10_common/_footer';// フッター
-@import 'parts/10_common/_detail-search';// 詳細検索
+
 
 
 // 部品系 ------------------------------------------------------
@@ -36,3 +36,7 @@
 @import 'parts/20_component/03_shop/_shop-top';
 @import 'parts/20_component/03_shop/_shop-menu';
 @import 'parts/20_component/03_shop/_shop-access';
+
+// 検索
+@import 'parts/20_component/04_search/_search-detail';// 詳細検索
+@import 'parts/20_component/04_search/_search-result';// 検索結果

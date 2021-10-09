@@ -31,8 +31,8 @@
 				</section>
 
 				<!-- 詳細検索 -->
-				<section class="front-page__detail-search">
-					<?php get_template_part('src-php/10_common/_detail-search'); ?>
+				<section class="front-page__search-detail">
+					<?php get_template_part('src-php/20_component/04_search/_search-detail'); ?>
 				</section>
 
 			</main>
