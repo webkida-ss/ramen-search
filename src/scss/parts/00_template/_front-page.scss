@@ -1,10 +1,20 @@
 .front-page{
+    %base{
+        margin-top: 60px;
+        @include mq(tab-only) {
+            margin-top: 40px;
+        }
+        @include mq(sp) {
+            margin-top: 20px;
+        }
+
+    }
     &__top{
     }
     &__search-detail{
-        margin-top: 60px;
+        @extend %base;
     }
     &__recommend{
-        margin-top: 60px;
+        @extend %base;
     }
 }
