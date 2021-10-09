@@ -18,7 +18,7 @@ global $array_region;
 				<select name="soup">
 					<option value="">ラーメンスープ</option>
 					<?php foreach ($array_soup as $item) : ?>
-						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+						<option value="<?php echo $item[1]; ?>"><?php echo esc_html($item[0]); ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -26,7 +26,7 @@ global $array_region;
 				<select name="thickness">
 					<option value="">麺の太さ</option>
 					<?php foreach ($array_thickness as $item) : ?>
-						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+						<option value="<?php echo $item[1]; ?>"><?php echo esc_html($item[0]); ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -39,7 +39,7 @@ global $array_region;
 				<select name="feature">
 					<option value="">お店の特徴</option>
 					<?php foreach ($array_feature as $item) : ?>
-						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+						<option value="<?php echo $item[1]; ?>"><?php echo esc_html($item[0]); ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -52,7 +52,7 @@ global $array_region;
 				<select name="region">
 					<option value="">地域</option>
 					<?php foreach ($array_region as $item) : ?>
-						<option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+						<option value="<?php echo $item[1]; ?>"><?php echo esc_html($item[0]); ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
