@@ -36,6 +36,15 @@ function my_global()
 		['1人で入りやすい', 'easy-to-enter'],
 	];
 
+	// キー項目からバリュー項目を取得
+	function get_value_by_key($array, $key)
+	{
+		return
+			array_filter($array, function ($element) use ($key) {
+				return $element[1] == $key;
+			})[0][0];
+	}
+
 	global $array_tabmenu;
 	$array_tabmenu = ['トップ', 'メニュー', 'アクセス'];
 }

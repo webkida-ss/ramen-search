@@ -1,91 +1,105 @@
-.search-result{
+.search-result {
 
-    &__top{
-        &--result{
-        
-        }
-    }
+	&__top {
+		&--condition {
+			span {
+				color: $gold;
+				font-weight: $font-weight-bold;
+				font-size: 1.2em;
+			}
+		}
+		&--num {
+			margin-top: 10px;
+			span {
+				color: $gold;
+				font-weight: $font-weight-bold;
+				font-size: 1.2em;
+			}
+		}
+	}
 
-    &__main{
-        margin-top: 50px;
-    }
+	&__main {
+		margin-top: 50px;
+	}
 
-    &__list{
-    
-    }
+	&__item {
+		padding: 20px 0;
+		border: 1px solid $gray;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all $transition-change-time ease 0s;
 
-    &__item{
-        border: 1px solid $gray;
-        border-radius: 5px;
-        padding: 20px 0;
-        cursor: pointer;
-        transition: all $transition-change-time ease 0s;
-        
-        &:hover{
-            box-shadow: 0px 0px 5px 0px $gray;
-        }
-        &:not(:first-child){
-            margin-top: 40px;
-        }
-        a{
-            display: inline-flex;
-            justify-content: center;
-        }
-        &--img{
-            width: 200px;
-            height: 200px;
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-        &--content{
-            margin-left: 30px;
-            width: 50%;
-            text-align: center;
-        }
-        &--title{
-            display: inline-block;
-            font-weight: $font-weight-bold;
-            font-size: 1.2em;
-            padding-bottom: 5px;
-            border-bottom: 2px solid $gold;
-        }
-        &--msg{
-            margin-top: 30px;
-            strong{
-                display: inline-block;
-                width: 100%;
-                text-align: left;
-            }
-            p{
-                text-align: left;
-                margin-top: 20px;
-                line-height: 1.5;
-                @include lhCrop(1.5);
-            }
-        }
+		&:hover {
+			box-shadow: 0px 0px 5px 0px $gray;
+		}
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
+		a {
+			display: inline-flex;
+			justify-content: center;
+		}
+		&--img {
+			width: 200px;
+			height: 200px;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&--content {
+			width: 50%;
+			margin-left: 30px;
+			text-align: center;
+		}
+		&--title {
+			display: inline-block;
+			padding-bottom: 5px;
+			font-weight: $font-weight-bold;
+			font-size: 1.2em;
 
-    }
-    &__notfound{
-    
-    }
+			border-bottom: 2px solid $gold;
+		}
+		&--msg {
+			margin-top: 30px;
+			strong {
+				display: inline-block;
+				width: 100%;
+				text-align: left;
+			}
+			p {
+				margin-top: 20px;
+				line-height: 1.5;
+				text-align: left;
 
-    &__pagenation{
-        $border: 1px solid $gold;
-        margin: 50px auto 0;
-		nav{
+				@include lhCrop(1.5);
+			}
+		}
+	}
+	&__notfound {
+		text-align: center;
+	}
+
+	&__pagenation {
+		margin: 50px auto 0;
+
+		$border: 1px solid $gold;
+		nav {
 			display: flex;
 			justify-content: center;
-			.nav-links{
+			.nav-links {
 				display: inline-flex;
-				font-size: 1.4rem;
 				font-weight: $font-weight-bold;
+				font-size: 1.4rem;
+
 				@include mq(sp) {
 					font-size: 1rem;
 				}
-				.page-numbers{
+				.page-numbers {
 					padding: 8px 12px;
+					// トランジション
+					transition: all $transition-change-time ease 0s;
+
 					@include mq(sp) {
 						padding: 5px 8px;
 					}
@@ -93,34 +107,32 @@
 					border-top: $border;
 					border-bottom: $border;
 					border-right: $border;
-					&:first-child{
+					&:first-child {
 						border-left: $border;
 					}
-					// トランジション
-					transition: all $transition-change-time ease 0s;
 					&:hover {
 						opacity: $hover-opacity;
 					}
 					// 前へ
-					&.prev{
+					&.prev {
 						border-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
 					}
 					// 次へ
-					&.next{
+					&.next {
 						border-top-right-radius: 5px;
 						border-bottom-right-radius: 5px;
 					}
 					// 現在ページ
-					&.current{
+					&.current {
 						background-color: $gold;
 						color: $white;
 					}
 				}
 			}
 		}
-		h2{
+		h2 {
 			display: none;
 		}
-    }
+	}
 }

@@ -13,7 +13,7 @@ global $array_region;
 
 		<!-- ラーメンの特徴 -->
 		<div class="searchform__item ramen">
-			<label><span>ラーメンの特徴</span>から選ぶ</label>
+			<label><span>ラーメン</span>の特徴から選ぶ</label>
 			<div class="searchform__item--select">
 				<select name="soup">
 					<option value="">ラーメンスープ</option>
@@ -34,7 +34,7 @@ global $array_region;
 
 		<!-- お店の特徴 -->
 		<div class="searchform__item feature">
-			<label><span>お店の特徴</span>から選ぶ</label>
+			<label><span>お店</span>の特徴から選ぶ</label>
 			<div class="searchform__item--select">
 				<select name="feature">
 					<option value="">お店の特徴</option>
