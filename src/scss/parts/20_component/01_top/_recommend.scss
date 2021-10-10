@@ -93,11 +93,23 @@
 			font-size: 1.2em;
 			font-style: italic;
 			border-bottom: 2px solid $gold;
+			@include mq(tab-only) {
+				font-size: 1.2rem;
+			}
+			@include mq(sp) {
+				font-size: 1.0rem;
+			}
 		}
 
 		&--msg {
 			margin-top: 10px;
 			font-size: 0.8em;
+			@include mq(tab-only) {
+				font-size: 1.2rem;
+			}
+			@include mq(sp) {
+				font-size: 1.0rem;
+			}
 		}
 	}
 }

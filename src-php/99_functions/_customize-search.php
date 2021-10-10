@@ -108,12 +108,13 @@ function custom_search($search, $wp_query)
 			if (!empty($word)) { // 空文字の場合はWHERE区作成しない
 				$search_word = '%' . esc_sql($word) . '%'; // 検索ワードをエスケープ
 				$search .= " AND (
-                    {$wpdb->posts}.post_title LIKE '{$search_word}' 
-                    OR {$wpdb->posts}.ID IN (
+                    {$wpdb->posts}.post_title LIKE '{$search_word}'  -- タイトル
+										OR {$wpdb->posts}.post_excerpt LIKE '{$search_word}'  -- 抜粋
+                    OR {$wpdb->posts}.ID IN ( 
                         SELECT distinct post_id
                         FROM {$wpdb->postmeta}
                         WHERE 
-                            {$wpdb->postmeta}.meta_key LIKE 'shop_%'
+                            {$wpdb->postmeta}.meta_key LIKE 'shop_%' -- カスタムフィールド
                             AND meta_value LIKE '{$search_word}'
                     )
                 ) ";

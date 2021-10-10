@@ -4,6 +4,15 @@
 	&__item {
 		display: flex;
 		border-top: 1px dotted $gold;
+
+		@include mq(tab-only) {
+			font-size: 1.4rem;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+			display: block;
+		}
+
 		&:not(:first-child) {
 			margin-top: 40px;
 		}
@@ -11,17 +20,36 @@
 		img {
 			width: 200px;
 			height: 200px;
+			@include mq(tab-only) {
+				width: 150px;
+				height: 150px;
+			}
+			@include mq(sp) {
+				width: 50%;
+				height: auto;
+				margin: 0 auto;
+			}
 		}
 		div,
 		p {
 			margin-left: 20px;
 			padding-top: 30px;
+			@include mq(sp) {
+				margin-left: 0;
+			}
 		}
 		div {
 			flex-shrink: 0;
 			width: 150px;
 			font-style: italic;
 			text-align: center;
+			@include mq(tab-only) {
+				width: 100px;
+			}
+			@include mq(sp) {
+				width: 80px;
+				margin: 0 auto;
+			}
 			span {
 				display: block;
 				margin-top: 20px;
@@ -32,6 +60,9 @@
 					font-size: 1.5em;
 
 					border-bottom: 1px solid red;
+				}
+				@include mq(sp) {
+					margin-top: 10px;
 				}
 			}
 		}

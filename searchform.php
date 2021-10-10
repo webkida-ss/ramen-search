@@ -13,10 +13,10 @@ global $array_region;
 
 		<!-- ラーメンの特徴 -->
 		<div class="searchform__item ramen">
-			<label><span>ラーメン</span>の特徴から選ぶ</label>
+			<label><span>ラーメン</span>の特徴</label>
 			<div class="searchform__item--select">
 				<select name="soup">
-					<option value="">ラーメンスープ</option>
+					<option value="">スープ</option>
 					<?php foreach ($array_soup as $item) : ?>
 						<option value="<?php echo $item[1]; ?>"><?php echo esc_html($item[0]); ?></option>
 					<?php endforeach; ?>
@@ -34,7 +34,7 @@ global $array_region;
 
 		<!-- お店の特徴 -->
 		<div class="searchform__item feature">
-			<label><span>お店</span>の特徴から選ぶ</label>
+			<label><span>お店</span>の特徴</label>
 			<div class="searchform__item--select">
 				<select name="feature">
 					<option value="">お店の特徴</option>
@@ -47,7 +47,7 @@ global $array_region;
 
 		<!-- 地域 -->
 		<div class="searchform__item region">
-			<label><span>地域</span>から選ぶ</label>
+			<label><span>地域</span></label>
 			<div class="searchform__item--select">
 				<select name="region">
 					<option value="">地域</option>
@@ -60,7 +60,7 @@ global $array_region;
 
 		<!-- フリーワード検索 -->
 		<div class="searchform__item">
-			<label><span>フリーワード</span>入力</label>
+			<label><span>フリーワード</span></label>
 			<input type="text" name='s'>
 		</div>
 

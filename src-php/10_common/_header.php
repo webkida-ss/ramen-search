@@ -20,36 +20,36 @@ global $array_feature;
 			</h1>
 			<nav class="header__nav">
 				<ul class="inner header__list">
-					<!-- ラーメンスープから選ぶ -->
+					<!-- ラーメンスープ -->
 					<li class="header__item">
-						<p class="header__item--main">ラーメンスープから選ぶ<span>soup</span></p>
+						<p class="header__item--main">スープ<span>soup</span></p>
 						<div class="header__item--detail">
 							<?php foreach ($array_soup as $item) : ?>
 								<a href="<?php echo esc_url(home_url() . '/?s=&soup=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
 							<?php endforeach; ?>
 						</div>
 					</li>
-					<!-- 麺の太さから選ぶ -->
+					<!-- 麺の太さ -->
 					<li class="header__item">
-						<p class="header__item--main">麺の太さから選ぶ<span>thickness</span></p>
+						<p class="header__item--main">麺の太さ<span>thickness</span></p>
 						<div class="header__item--detail">
 							<?php foreach ($array_thickness as $item) : ?>
 								<a href="<?php echo esc_url(home_url() . '/?s=&thickness=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
 							<?php endforeach; ?>
 						</div>
 					</li>
-					<!-- 地域から選ぶ -->
+					<!-- 地域 -->
 					<li class="header__item">
-						<p class="header__item--main">地域から選ぶ<span>region</span></p>
+						<p class="header__item--main">地域<span>region</span></p>
 						<div class="header__item--detail">
 							<?php foreach ($array_region as $item) : ?>
 								<a href="<?php echo esc_url(home_url() . '/?s=&region=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>
 							<?php endforeach; ?>
 						</div>
 					</li>
-					<!-- 特徴から選ぶ -->
+					<!-- 特徴 -->
 					<li class="header__item">
-						<p class="header__item--main">お店の特徴から選ぶ<span>feature</span></p>
+						<p class="header__item--main">お店の特徴<span>feature</span></p>
 						<div class="header__item--detail">
 							<?php foreach ($array_feature as $item) : ?>
 								<a href="<?php echo esc_url(home_url() . '/?s=&feature=' . $item[1]); ?>"><?php echo esc_html($item[0]) ?></a>

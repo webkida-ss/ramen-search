@@ -2,14 +2,17 @@
 	z-index: map-get($layer,header);
 	width: 100%;
 
-	@include mq(sp) {
-		height: $header-height-sp;
-	}
 	&__upper {
 		padding: 5px 0;
 		background-color: $gold;
 		color: $annin-white;
 		text-align: center;
+		@include mq(tab-only) {
+			font-size: 1.4rem;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
 	}
 
 	&__title {
@@ -20,6 +23,14 @@
 		cursor: pointer;
 		transition: opacity $transition-change-time ease 0s;
 		transition: all $transition-change-time ease 0s;
+		@include mq(tab-only) {
+			width: 80px;
+			height: 80px;
+		}
+		@include mq(sp) {
+			width: 70px;
+			height: 70px;
+		}
 		a {
 			img {
 				width: 100%;
@@ -47,15 +58,28 @@
 		border-bottom: $border;
 	}
 	&__item {
+		display: block;
 		position: relative;
-		width: 200px;
+		width: 20%;
 		height: 100%;
 		padding: 10px 0;
 		text-align: center;
 		cursor: pointer;
 		transition: all $transition-change-time ease 0s;
+
+		@include mq(tab-only) {
+			font-size: 1.4rem;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+			width: 24%;
+		}
+
 		&:not(:first-child) {
 			margin-left: 20px;
+			@include mq(sp) {
+				margin-left: 5px;
+			}
 		}
 		&--main {
 			span {

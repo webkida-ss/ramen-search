@@ -7,6 +7,12 @@
 	background-position: center;
 	background-size: cover;
 	text-align: center;
+	@include mq(tab-only) {
+		height: 400px;
+	}
+	@include mq(sp) {
+		height: 300px;
+	}
 
 	form {
 		display: inline-block;
@@ -31,11 +37,26 @@
 				color: $gold;
 				font-weight: $font-weight-bold;
 			}
+			@include mq(tab-only) {
+				width: 180px;
+				font-size: 1.2rem;
+			}
+			@include mq(sp) {
+				width: 100px;
+				font-size: 1rem;
+			}
+			
 		}
 		&--select {
 			display: inline-block;
 			position: relative;
 			width: 200px;
+			@include mq(tab-only) {
+				width: 150px;
+			}
+			@include mq(sp) {
+				width: 100px;
+			}
 			select {
 				width: 100%;
 				border: none;
@@ -76,6 +97,12 @@
 			font-weight: $font-weight-bold;
 			letter-spacing: .1em;
 			outline: none;
+			@include mq(tab-only) {
+				width: 300px;
+			}
+			@include mq(sp) {
+				width: 300px;
+			}
 		}
 	}
 

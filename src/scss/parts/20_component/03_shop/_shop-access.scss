@@ -1,9 +1,17 @@
 .shop-access {
+	@extend %section-padding;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	@extend %section-padding;
+	@include mq(tab-only) {
+		font-size: 1.4rem;
+	}
+	@include mq(sp) {
+		display: block;
+		font-size: 1.2rem;
+	}
+
 	&__map {
 		position: relative;
 		width: 50%;
@@ -16,6 +24,10 @@
 			height: 100%;
 			border: none;
 		}
+		@include mq(sp) {
+			width: 100%;
+			padding-top: 50 / 100 * 100%;
+		}
 	}
 	&__address {
 		width: 50%;
@@ -23,6 +35,9 @@
 		p {
 			&:not(:first-child) {
 				margin-top: 30px;
+				@include mq(sp) {
+					margin-top: 10px;
+				}
 			}
 			span {
 				display: inline-block;
@@ -30,6 +45,11 @@
 
 				border-bottom: 2px solid $gold;
 			}
+		}
+		@include mq(sp) {
+			margin-top: 20px;
+			width: 100%;
+			padding-left: 0;
 		}
 	}
 }

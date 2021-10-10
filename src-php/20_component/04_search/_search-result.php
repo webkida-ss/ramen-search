@@ -57,6 +57,10 @@ $pagenation_args = array(
 						<dd><?php echo esc_html($feature_text); ?></dd>
 					</div>
 					<div>
+						<dt>フリーワード：</dt>
+						<dd><?php echo esc_html($search_word); ?></dd>
+					</div>
+					<div>
 						<dt>対象件数： </dt>
 						<dd><?php echo esc_html($found_posts); ?><small>件</small></dd>
 					</div>
@@ -67,7 +71,6 @@ $pagenation_args = array(
 				<?php the_posts_pagination($pagenation_args); ?>
 			</div>
 		</div>
-
 
 		<!-- 検索結果一覧 -->
 		<div class="search-result__main">
