@@ -7,9 +7,6 @@
 
 /***************************************************************
  * 検索条件の基本設定
- * 　検索結果画面の場合のみを対象
- * 　GETパラメータを検索条件に指定（AND条件）
- * 　　学校種別、地方名、県名、学問、特色
  ***************************************************************/
 function edit_pre_get_posts($query)
 {
@@ -20,70 +17,67 @@ function edit_pre_get_posts($query)
 
 	// 検索結果画面の場合のみを対象
 	if ($query->is_search()) {
-		$query->set('post_type', 'school'); // カスタム投稿：学校詳細のみ
+		$query->set('post_type', 'shop'); // カスタム投稿：学校詳細のみ
 	}
 
 	// クエリ検索条件
 	$meta_query = [];
 
 	/******************************************
-	 * 学校種別：大学・短大の場合はリスト検索
+	 * スープ：タクソノミー検索
 	 ******************************************/
-	// $school_kind = $_GET['kind'];
-	// if (!empty($school_kind)) {
-	//     $value = ($school_kind == '大学・短大') ? array('大学', '短大') : $school_kind;
-	//     $compare = ($school_kind == '大学・短大') ? 'IN' : '=';
-	//     $meta_query[] =    array(
-	//         array(
-	//             'key'     => 'school_kind',
-	//             'value'   => $value,
-	//             'compare' => $compare
-	//         )
-	//     );
-	// }
+	$soup = $_GET['soup'];
+	if (!empty($soup)) {
+		$meta_query[] =    array(
+			array(
+				'taxonomy' => 'soup',
+				'field' => 'slug',
+				'terms' => $soup
+			)
+		);
+	}
 
 	/******************************************
-	 * 学問：カンマ区切りのリストに対して部分一致検索
-	 * 複数選択の場合はOR検索
+	 * 麺の太さ：タクソノミー検索
 	 ******************************************/
-	// $academics = $_GET['academics'];
-	// if (!empty($academics)) {
-	// 	$sub_query = [
-	// 		'relation' => 'OR'
-	// 	];
-	// 	foreach ($academics as $a) {
-	// 		$sub_query[] =    array(
-	// 			'key'     => 'school_academic',
-	// 			'value'   => $a,
-	// 			'compare' => 'LIKE'
-	// 		);
-	// 	}
-	// 	$meta_query[] = $sub_query;
-	// }
+	$thickness = $_GET['thickness'];
+	if (!empty($thickness)) {
+		$meta_query[] =    array(
+			array(
+				'taxonomy' => 'thickness',
+				'field' => 'slug',
+				'terms' => $thickness
+			)
+		);
+	}
 
-	// /******************************************
-	//  * 分野：学問のカンマ区切りのリストに対して部分一致検索
-	//  ******************************************/
-	// $field = $_GET['field'];
-	// if (!empty($field)) {
-	// 	$meta_query[] =    array(
-	// 		'key'     => 'school_academic',
-	// 		'value'   => $field,
-	// 		'compare' => 'LIKE'
-	// 	);
-	// }
+	/******************************************
+	 * 地域：タクソノミー検索
+	 ******************************************/
+	$region = $_GET['region'];
+	if (!empty($region)) {
+		$meta_query[] =    array(
+			array(
+				'taxonomy' => 'region',
+				'field' => 'slug',
+				'terms' => $region
+			)
+		);
+	}
 
-	// /******************************************
-	//  * 特色：カンマ区切りのリストに対して部分一致検索
-	//  ******************************************/
-	// $feature = $_GET['feature'];
-	// if (!empty($feature)) {
-	// 	$meta_query[] =    array(
-	// 		'key'     => 'school_feature',
-	// 		'value'   => $feature,
-	// 		'compare' => 'LIKE'
-	// 	);
-	// }
+	/******************************************
+	 * 特徴：タクソノミー検索
+	 ******************************************/
+	$feature = $_GET['feature'];
+	if (!empty($feature)) {
+		$meta_query[] =    array(
+			array(
+				'taxonomy' => 'feature',
+				'field' => 'slug',
+				'terms' => $feature
+			)
+		);
+	}
 
 	// 絞り込み条件をセット
 	$query->set('meta_query', $meta_query);
@@ -119,13 +113,7 @@ function custom_search($search, $wp_query)
                         SELECT distinct post_id
                         FROM {$wpdb->postmeta}
                         WHERE 
-                            (
-                                {$wpdb->postmeta}.meta_key LIKE 'school_base_msg%'
-                                OR {$wpdb->postmeta}.meta_key LIKE 'school_course_list_%_school_course_%'
-                                OR {$wpdb->postmeta}.meta_key LIKE 'school_fee_%school_fee_%'
-                                OR {$wpdb->postmeta}.meta_key LIKE 'school_oc%'
-                                OR {$wpdb->postmeta}.meta_key IN ('school_kind','school_region','school_prefecture','school_access_free','school_academic','school_feature')
-                            )
+                            {$wpdb->postmeta}.meta_key LIKE 'shop_%'
                             AND meta_value LIKE '{$search_word}'
                     )
                 ) ";
