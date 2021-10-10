@@ -1,7 +1,26 @@
 .shop-top {
 	@extend %section-padding;
 
+	dl{
+		div{
+			display: inline-flex;
+			align-items: flex-end;
+			&:not(:first-child){
+				margin-left: 30px;
+			}
+			dt{
+				font-size: 0.8em;
+			}
+			dd{
+				color: $gold;
+				font-weight: $font-weight-bold;
+				font-size: 1.2em;
+			}
+		}
+	}
+
 	&__top-msg {
+		margin-top: 50px;
 		strong {
 			display: block;
 			padding-bottom: 5px;
@@ -20,7 +39,7 @@
 		justify-content: center;
 		margin-top: 30px;
 	}
-	&__main {
+	&__thumbnail {
 		display: block;
 		width: 40%;
 		border-radius: 9px;
