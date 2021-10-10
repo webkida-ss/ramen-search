@@ -14,7 +14,7 @@ $the_query = get_posts($args);
 <div class="recommend">
 	<div class="inner recommend__container">
 		<?php if ($the_query) : ?>
-			<div class="inner recommend__top">
+			<div class="section-title">
 				<span>Ranking</span>
 				<p>今週のおすすめランキングTOP3！</p>
 			</div>

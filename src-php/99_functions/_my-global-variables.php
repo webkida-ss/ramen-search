@@ -40,9 +40,9 @@ function my_global()
 	function get_value_by_key($array, $key)
 	{
 		return
-			array_filter($array, function ($element) use ($key) {
+			array_values(array_filter($array, function ($element) use ($key) {
 				return $element[1] == $key;
-			})[0][0];
+			}))[0][0];
 	}
 
 	global $array_tabmenu;

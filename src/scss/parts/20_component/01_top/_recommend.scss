@@ -1,46 +1,8 @@
 .recommend {
 
-
-
 	&__container {
 		
 	}
-	$border: 2px dotted $gray;
-	&__top {
-		padding: 20px 0;
-		border-top: $border;
-		border-bottom: $border;
-		font-size: 2rem;
-		text-align: center;
-		font-style: italic;
-		span{
-			display: block;
-			font-size: 0.8em;
-			color: $gold;
-		}
-		p{
-			margin-top: 5px;
-			display: inline-block;
-			position: relative;
-			&::before,&::after{
-				position: absolute;
-				display: block;
-				top: 50%;
-				border-right: 3px solid $gold;
-				height: 150%;
-				width: 3px;
-				content: '';
-				transform: translateY(-50%) rotate(15deg);
-			}
-			&::before{
-				left: -20px;
-			}
-			&::after{
-				right: -20px;
-			}
-		}
-	}
-
 	
 	&__list {
 		display: flex;

@@ -11,12 +11,10 @@ $thickness = $_GET['thickness']; // 麺の太さ
 $feature = $_GET['feature']; // 特色
 $search_word = get_search_query(); // 検索ワード
 
-$result_word = "";
-$result_word = !empty($search_word) ? $search_word . 'を含む' : '';
-$result_word .= !empty($region) ? get_value_by_key($array_region, $region) . 'の' : '';
-$result_word .= !empty($soup) ? get_value_by_key($array_soup, $soup) . 'の' : '';
-$result_word .= !empty($thickness) ? get_value_by_key($array_thickness, $thickness) . 'の' : '';
-$result_word .= !empty($feature) ? get_value_by_key($array_feature, $feature) . 'の' : '';
+$soup_text = !empty($soup) ? get_value_by_key($array_soup, $soup) : '-';
+$region_text = !empty($region) ? get_value_by_key($array_region, $region) : '-';
+$thickness_text = !empty($thickness) ? get_value_by_key($array_thickness, $thickness) : '-';
+$feature_text = !empty($feature) ? get_value_by_key($array_feature, $feature) : '-';
 
 $found_posts = $wp_query->found_posts; // 件数
 
@@ -37,8 +35,32 @@ $pagenation_args = array(
 		<!-- 検索結果トップ -->
 		<div class="search-result__top">
 			<div class="search-result__top--result">
-				<p class="search-result__top--condition"><span><?php echo esc_html($result_word); ?></span>ラーメン屋</p>
-				<p class="search-result__top--num">対象件数： <span><?php echo esc_html($found_posts); ?></span>件</p>
+				<div class="section-title">
+					<span>Result</span>
+					<p>検索結果</p>
+				</div>
+				<dl>
+					<div>
+						<dt>地域：</dt>
+						<dd><?php echo esc_html($region_text); ?></dd>
+					</div>
+					<div>
+						<dt>ラーメンスープ：</dt>
+						<dd><?php echo esc_html($soup_text); ?></dd>
+					</div>
+					<div>
+						<dt>麺の太さ：</dt>
+						<dd><?php echo esc_html($thickness_text); ?></dd>
+					</div>
+					<div>
+						<dt>お店の特徴：</dt>
+						<dd><?php echo esc_html($feature_text); ?></dd>
+					</div>
+					<div>
+						<dt>対象件数： </dt>
+						<dd><?php echo esc_html($found_posts); ?><small>件</small></dd>
+					</div>
+				</dl>
 			</div>
 			<!-- ページネーション -->
 			<div class="search-result__pagenation upper">
