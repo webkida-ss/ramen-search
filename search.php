@@ -22,14 +22,17 @@
 			<main class="main">
 
 				<!-- 詳細検索 -->
-				<section class="search__search-detail">
-					<?php get_template_part('src-php/20_component/04_search/_search-detail'); ?>
+				<section class="search__searchform">
+					<div class="inner">
+						<?php get_search_form(); ?>
+					</div>
 				</section>
 
 				<!-- 検索結果 -->
 				<section class="search__search-result">
 					<?php get_template_part('src-php/20_component/04_search/_search-result'); ?>
 				</section>
+
 			</main>
 		</div><!-- /.container -->
 

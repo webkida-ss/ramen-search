@@ -31,8 +31,10 @@
 				</section>
 
 				<!-- 詳細検索 -->
-				<section class="front-page__search-detail">
-					<?php get_template_part('src-php/20_component/04_search/_search-detail'); ?>
+				<section class="front-page__searchform">
+					<div class="inner">
+						<?php get_search_form(); ?>
+					</div>
 				</section>
 
 			</main>
