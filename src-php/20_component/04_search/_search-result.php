@@ -9,7 +9,7 @@ $soup = $_GET['soup']; // スープ
 $region = $_GET['region']; // 地域
 $thickness = $_GET['thickness']; // 麺の太さ
 $feature = $_GET['feature']; // 特色
-$search_word = get_search_query(); // 検索ワード
+$search_word = !empty(get_search_query()) ? get_search_query() : '-';; // 検索ワード
 
 $soup_text = !empty($soup) ? get_value_by_key($array_soup, $soup) : '-';
 $region_text = !empty($region) ? get_value_by_key($array_region, $region) : '-';
