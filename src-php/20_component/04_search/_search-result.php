@@ -45,7 +45,7 @@ $pagenation_args = array(
 						<dd><?php echo esc_html($region_text); ?></dd>
 					</div>
 					<div>
-						<dt>ラーメンスープ：</dt>
+						<dt>スープ：</dt>
 						<dd><?php echo esc_html($soup_text); ?></dd>
 					</div>
 					<div>

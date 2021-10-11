@@ -20,7 +20,7 @@ global $array_feature;
 			</h1>
 			<nav class="header__nav">
 				<ul class="inner header__list">
-					<!-- ラーメンスープ -->
+					<!-- スープ -->
 					<li class="header__item">
 						<p class="header__item--main">スープ<span>soup</span></p>
 						<div class="header__item--detail">
